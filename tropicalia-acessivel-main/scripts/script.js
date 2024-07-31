@@ -1,40 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const accessibilityBtn = document.getElementById('accessibility-btn');
-    const accessibilityOptions = document.getElementById('accessibility-options');
+    const btnAcessibilidade = document.getElementById('btn-acessibilidade');
+    const opcoesAcessibilidade = document.getElementById('opcoes-acessibilidade');
 
-    accessibilityBtn.addEventListener('click', function() {
-        accessibilityBtn.classList.toggle('rotated-button');
-        accessibilityOptions.classList.toggle('d-none');
-        accessibilityOptions.classList.toggle('show');
+    btn_acessibilidade.addEventListener('click', function() {
+        btn_acessibilidade.classList.toggle('rotated-button');
+        opcoes_acessibilidade.classList.toggle('d-none');
+        opcoes_acessibilidade.classList.toggle('show');
         
         // Atualização do valor do atributo aria-expanded
-        const isExpanded = accessibilityBtn.getAttribute('aria-expanded') === 'true';
-        accessibilityBtn.setAttribute('aria-expanded', !isExpanded);
+        const isExpanded = btn_acessibilidade.getAttribute('aria-expanded') === 'true';
+        btn_acessibilidade.setAttribute('aria-expanded', !isExpanded);
     });
 
-    const increaseFontBtn = document.getElementById('increase-font');
-    const resetFontBtn = document.getElementById('reset-font');
-    const decreaseFontBtn = document.getElementById('decrease-font');
-    const toggleContrastBtn = document.getElementById('toggle-contrast');
+    const btnAumentaFonte = document.getElementById('aumenta-fonte');
+    const btnResetaFonte = document.getElementById('reseta-fonte');
+    const btnDiminiFonte = document.getElementById('diminui-fonte');
+    const btnContraste = document.getElementById('btn-contraste');
 
     let currentFontSize = 1;
 
-    increaseFontBtn.addEventListener('click', function() {
+    btnAumentaFonte.addEventListener('click', function() {
         currentFontSize += 0.1;
-        document.body.style.fontSize = `${currentFontSize}rem`;
+        document.documentElement.style.fontSize += 2px;
     });
 
-    resetFontBtn.addEventListener('click', function() {
+    btnResetaFonte.addEventListener('click', function() {
         currentFontSize = 1;
         document.body.style.fontSize = `${currentFontSize}rem`;
     });
 
-    decreaseFontBtn.addEventListener('click', function() {
+    btnDiminiFonte.addEventListener('click', function() {
         currentFontSize -= 0.1;
         document.body.style.fontSize = `${currentFontSize}rem`;
     });
 
-    toggleContrastBtn.addEventListener('click', function() {
+    btnContraste.addEventListener('click', function() {
         document.body.classList.toggle('high-contrast');
     });
 });

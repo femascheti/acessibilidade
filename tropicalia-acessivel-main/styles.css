@@ -16,7 +16,7 @@ header {
     background-color: #ffffff;
 }
 
-.section-tropicalia{
+.tropicalia-secao{
     margin-top: 5rem;
     margin-bottom: 5rem;
 }
@@ -33,7 +33,7 @@ section {
     font-weight: 600;
 }
 
-.home-background {
+.inicio-fundo {
     /* aula 3 */
     background-image: url('img/4965007.jpg'); /* Substitua pelo caminho da sua imagem */
     background-size: cover;
@@ -72,7 +72,7 @@ section {
     transform: translateY(-50%);
 }
 
-.botao-home{
+.botao-inicio{
     /* poderíamos utilizar a classe do bootstrap btn-primary mas isso vai modificar outros botões */
     /* background-color: #FF862A; */
     background-color: var(--laranja-claro);
@@ -182,14 +182,14 @@ h2 {
     color: var(--high-contrast-link);
 }
 
-.high-contrast .botao-home,
+.high-contrast .botao-inicio,
 .high-contrast .formulario button,
 .high-contrast .btn-primary {
     background-color: var(--high-contrast-link);
     color: var(--high-contrast-bg);
 }
 
-.high-contrast .home-background,
+.high-contrast .inicio-background,
 .high-contrast #contato {
     background: none;
     background-color: var(--high-contrast-bg);
